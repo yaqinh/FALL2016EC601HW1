@@ -197,10 +197,10 @@ def main():
     for loop, line in enumerate(headers.split('\n')):
         if loop == 0:
             p1, p2 = tuple(line.split('/'))
-            print(red(p1) + grayscale[14]('/') + red(p2)) #change color from green -> red, cyan -> red
+            print(red(p1) + grayscale[14]('/') + red(p2)) #change color from green -> red cyan -> red
         else:
             pos = line.find(':')
-            print(grayscale[14](line[:pos + 1]) + cyan(line[pos + 1:]))
+            print(grayscale[14](line[:pos + 1]) + blue(line[pos + 1:])) #change color cyan -> blue
 
     print()
 
@@ -230,10 +230,10 @@ def main():
     template = '\n'.join(tpl_parts)
 
     def fmta(s):
-        return cyan('{:^7}'.format(str(s) + 'ms'))
+        return red('{:^7}'.format(str(s) + 'ms')) #change from cyan to red
 
     def fmtb(s):
-        return cyan('{:<7}'.format(str(s) + 'ms'))
+        return green('{:<7}'.format(str(s) + 'ms')) #change from cyan to green
 
     stat = template.format(
         # a
