@@ -230,7 +230,7 @@ def main():
     template = '\n'.join(tpl_parts)
 
     def fmta(s):
-        return red('{:^7}'.format(str(s) + 'ms')) #change from cyan to red
+        return yellow('{:^7}'.format(str(s) + 'ms')) #change from cyan to yellow
 
     def fmtb(s):
         return green('{:<7}'.format(str(s) + 'ms')) #change from cyan to green
