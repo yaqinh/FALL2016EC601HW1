@@ -50,7 +50,7 @@ https_template = """
 """[1:]
 
 http_template = """
-  DNS Lookup   TCP Connection   Server Processing   Content Transfer
+  DNS Lookup--->TCP Connection-->Server Processing--->Content Transfer 
 [   {a0000}  |     {a0001}    |      {a0003}      |      {a0004}     ]
              |                |                   |                  |
     namelookup:{b0000}        |                   |                  |
@@ -59,7 +59,7 @@ http_template = """
                                                                  total:{b0004}
 """[1:]
 
-
+#added rows for clarity in sequence of events
 ISATTY = sys.stdout.isatty()
 
 
@@ -258,6 +258,7 @@ def main():
     if show_speed:
         print('speed_download: {:.1f} KiB, speed_upload: {:.1f} KiB'.format(
             d['speed_download'] / 1024, d['speed_upload'] / 1024))
+        print('HELLOOOOOOO')
 
 
 if __name__ == '__main__':
