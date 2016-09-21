@@ -258,7 +258,7 @@ def main():
     if show_speed:
         print('speed_download: {:.1f} KiB, speed_upload: {:.1f} KiB'.format(
             d['speed_download'] / 1024, d['speed_upload'] / 1024))
-        print('HELLOOOOOOO')
+        
 
 
 if __name__ == '__main__':
